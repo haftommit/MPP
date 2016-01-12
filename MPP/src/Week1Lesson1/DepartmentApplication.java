@@ -29,7 +29,8 @@ class Department {
 		int salary = 0;
 		return salary;
 	}
-	public void showAllMembers(){
+	public void showAllMembers(Object obj){
+		Object classname = obj.getClass();
 
 	}
 
@@ -140,6 +141,15 @@ class Course {
 		return units;
 	}
 
+}
+class Staffstudents extends Student{
+	private double salary;
+	
+	public Staffstudents(double salary, String name, String phone, int age) {
+		super(name, phone, age);
+		
+		this.salary = salary;
+	}
 }
 
 public class DepartmentApplication
