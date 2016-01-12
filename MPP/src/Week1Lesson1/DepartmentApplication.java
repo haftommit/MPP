@@ -80,11 +80,7 @@ class Faculty extends Person{
 	}
 }
 class Student extends Person{
-	/**
-	 * @param name
-	 * @param phone
-	 * @param age
-	 */
+	
 	public Student(String name, String phone, int age) {
 		super(name, phone, age);
 		// TODO Auto-generated constructor stub
@@ -150,9 +146,6 @@ public class DepartmentApplication
 	public static void main(String[] args) throws IOException
 	{
 		Department dept = new Department("ComputerScience");
-
-		//  The following commented out code will help you 
-		//  create the objects that you need.
 		
 		// Create faculty objects
 		Faculty frankMoore = new Faculty("Frank Moore","472-5921",43,10000);	
