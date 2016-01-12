@@ -80,15 +80,14 @@ class Faculty extends Person{
 	}
 }
 class Student extends Person{
+
+	private double GPA;
+	ArrayList<Course> courseList = new ArrayList<Course>();
 	
 	public Student(String name, String phone, int age) {
 		super(name, phone, age);
 		// TODO Auto-generated constructor stub
 	}
-
-	private double GPA;
-	ArrayList<Course> courseList = new ArrayList<>();
-
 	public double getGPA() {
 		return GPA;
 	}
@@ -118,7 +117,9 @@ class Course {
 	private String number;
 	private String title;
 	private int units;
-	private ArrayList<Student> studentList;
+	private Faculty faculty;
+	
+	
 	public Course(String number, String title, int units) {
 		super();
 		this.studentList = new ArrayList<Student>();
