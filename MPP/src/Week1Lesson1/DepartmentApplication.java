@@ -1,26 +1,33 @@
-/**
- * 
- */
 package Week1Lesson1;
 
+import java.io.BufferedReader;
 import java.io.IOException;
+import java.io.InputStreamReader;
+import java.util.ArrayList;
 
 /**
  * @author haftomtesfay
  *
  */
 class Department {
-	private String name;
+	private String name; // Department name
+	private ArrayList<Person> personList; // Association (multiple) means - Department keeps a reference to Person class
 
+	public Department(String name) {
+		this.name = name;
+		this.personList = new ArrayList<Person>();
+	}
+	
+	public void createPerson(){
+		person = new Person(String name,double phone, int age);
+	}
 	public String getName() {
 		return name;
 	}
-	public void setName(String name) {
-		this.name = name;
-	}
-	public void getTotalSalary(){
+	public double getTotalSalary(){
 
 		int salary = 0;
+		return salary;
 	}
 	public void showAllMembers(){
 
@@ -31,48 +38,60 @@ class Department {
 		System.out.println("3");
 	}
 }
-class Person extends Department{
+class Person{
 	private String name;
 	private String phone;
 	private int age;
+
+	public Person(String name, String phone, int age) {
+		
+		this.name = name;
+		this.phone = phone;
+		this.age = age;
+	}
 	public String getName() {
 		return name;
-	}
-	public void setName(String name) {
-		this.name = name;
 	}
 	public String getPhone() {
 		return phone;
 	}
-	public void setPhone(String phone) {
-		this.phone = phone;
-	}
+
 	public int getAge() {
 		return age;
-	}
-	public void setAge(int age) {
-		this.age = age;
 	}
 
 }
 class Faculty extends Person{
 
 	private double salary;
+	ArrayList<Course> facultyList = new ArrayList<Course>();
+
+	public Faculty(String name, String phone, int age, double salary) {
+		super(name,phone, age);
+		this.salary = salary;
+	}
 
 	public double getSalary() {
 		return salary;
-	}
-
-	public void setSalary(double salary) {
-		this.salary = salary;
 	}
 
 	public void getTotalUnits(){
 
 	}
 }
-class Student{
+class Student extends Person{
+	/**
+	 * @param name
+	 * @param phone
+	 * @param age
+	 */
+	public Student(String name, String phone, int age) {
+		super(name, phone, age);
+		// TODO Auto-generated constructor stub
+	}
+
 	private double GPA;
+	ArrayList<Course> courseList = new ArrayList<>();
 
 	public double getGPA() {
 		return GPA;
@@ -86,41 +105,44 @@ class Student{
 
 	}
 }
-class Staff{
+class Staff extends Person{
 	private double salary;
+	
+	public Staff(double salary) {
+		super(name, name, age);
+		this.salary = salary;
+	}
 
 	public double getSalary() {
 		return salary;
 	}
-
-	public void setSalary(double salary) {
-		this.salary = salary;
-	}
 }
-class Course{
+class Course {
 
 	private String number;
 	private String title;
 	private int units;
-	
+	private ArrayList<Student> studentList;
+	public Course(String number, String title, int units) {
+		super();
+		this.studentList = new ArrayList<Student>();
+		this.number = number;
+		this.title = title;
+		this.units = units;
+	}
+
 	public String getNumber() {
 		return number;
 	}
-	public void setNumber(String number) {
-		this.number = number;
-	}
+
 	public String getTitle() {
 		return title;
 	}
-	public void setTitle(String title) {
-		this.title = title;
-	}
+
 	public int getUnits() {
 		return units;
 	}
-	public void setUnits(int units) {
-		this.units = units;
-	}
+
 }
 
 public class DepartmentApplication
@@ -131,9 +153,7 @@ public class DepartmentApplication
 
 		//  The following commented out code will help you 
 		//  create the objects that you need.
-
-		/*******************************************************
-
+		
 		// Create faculty objects
 		Faculty frankMoore = new Faculty("Frank Moore","472-5921",43,10000);	
 		Faculty samHoward = new Faculty("Sam Howard","472-7222",55,9500);
@@ -151,7 +171,6 @@ public class DepartmentApplication
 		dept.addStudent(maryJones);
 		dept.addStudent(leeJohnson);
 
-
 		// Create staff objects
 		Staff frankGore = new Staff("Frank Gore","472-3321",33,4050);
 		Staff adamDavis = new Staff("Adam Davis","472-7552",50,5500);
@@ -167,21 +186,6 @@ public class DepartmentApplication
 		Course cs240 = new Course("cs240","datastructure",2, johnDoodle);
 		Course cs301 = new Course("cs301","Software engg",3, samHoward);
 		Course cs450 = new Course("cs450","Advanced architecture",5,frankMoore);
-
-		/*
-		 * The above course objects will go inside either
-		 * a faculty object, or a student object.  Not all of the course
-		 *  objects go into the same object.
-		 * 
-		 *  You would have code that looks something like :
-		 *  frankMoore.addCourse(cs450);
-		 * 
-		 *  The addCourse method would have to be written in
-		 *  the faculty class.  Something similar would be done 
-		 *  for students.
-		 */
-
-		/********************************************************/
 
 
 		double totsalary = 0;
@@ -236,5 +240,5 @@ public class DepartmentApplication
 		String s = getString();
 		return Integer.parseInt(s);
 	}
-	//-------------------------------------------------------------
+
 }  // end class 
