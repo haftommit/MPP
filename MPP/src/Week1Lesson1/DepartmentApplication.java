@@ -3,55 +3,60 @@ package Week1Lesson1;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
+import java.sql.Date;
 import java.util.ArrayList;
+
 
 /**
  * @author haftomtesfay
  *
  */
 class Department {
-	private String name; // Department name
-	private ArrayList<Person> personList; // Association (multiple) means - Department keeps a reference to Person class
+	private String deptName; // Department name
+	private ArrayList<Person> personList; // Association (0...*)  - Department keeps a reference to list of Person class
 
-	public Department(String name) {
-		this.name = name;
+	public Department(String name, Person person) { // Constructor
+		this.deptName = name;
 		this.personList = new ArrayList<Person>();
 	}
 	
-	public void createPerson(){
-		person = new Person(String name,double phone, int age);
+	public String getDeptName() {
+		return deptName;
 	}
-	public String getName() {
-		return name;
+	
+	public void getPersonList(){
+		
+		ArrayList<Person> plist = new ArrayList<Person>();
+		System.out.println("List of Persons in the Dept"+deptName);
 	}
-	public double getTotalSalary(){
+	
+	public void showAllMembers(){// shows the name, phone number, age and type (student, faculty or staff) of all members in the department.
+		
+		
+	}
 
-		int salary = 0;
-		return salary;
-	}
-	public void showAllMembers(Object obj){
-		Object classname = obj.getClass();
-
-	}
-
-	public void unitsPerFaculty(){
+	public void unitsPerFaculty(){// shows a list of all faculty names and the total number of units they teach.
 
 		System.out.println("3");
 	}
+	
+	public double getTotalSalary(){// computes the sum of all the salaries (per month) paid to faculty and staff.
+
+		
+	}
 }
 class Person{
-	private String name;
-	private String phone;
-	private int age;
+	protected String personName;
+	protected String phone;
+	protected int age;
 
 	public Person(String name, String phone, int age) {
-		
-		this.name = name;
+		this.personName = name;
 		this.phone = phone;
 		this.age = age;
 	}
 	public String getName() {
-		return name;
+		return personName;
 	}
 	public String getPhone() {
 		return phone;
@@ -102,15 +107,16 @@ class Student extends Person{
 	}
 }
 class Staff extends Person{
-	private double salary;
+
+	private double staffSalary;
 	
 	public Staff(double salary) {
-		super(name, name, age);
-		this.salary = salary;
+		super();
+		this.staffSalary = salary;
 	}
 
 	public double getSalary() {
-		return salary;
+		return staffSalary;
 	}
 }
 class Course {
@@ -123,7 +129,6 @@ class Course {
 	
 	public Course(String number, String title, int units) {
 		super();
-		this.studentList = new ArrayList<Student>();
 		this.number = number;
 		this.title = title;
 		this.units = units;
@@ -144,10 +149,13 @@ class Course {
 }
 class Staffstudents extends Student{
 	private double salary;
+	private Date datastarted;
+	private Staff staff;
 	
-	public Staffstudents(double salary, String name, String phone, int age) {
-		super(name, phone, age);
-		
+	
+	public Staffstudents(double salary, Date datestarted, Staff staff) {
+		this.datastarted = datestarted;
+		this.salary = salary;
 		this.salary = salary;
 	}
 }
@@ -156,7 +164,7 @@ public class DepartmentApplication
 {
 	public static void main(String[] args) throws IOException
 	{
-		Department dept = new Department("ComputerScience");
+		Department dept = new Department("ComputerScience", new Person("Haftom", "123", 25));
 		
 		// Create faculty objects
 		Faculty frankMoore = new Faculty("Frank Moore","472-5921",43,10000);	
