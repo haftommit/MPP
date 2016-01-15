@@ -1,6 +1,3 @@
-/**
- * 
- */
 package Week1Lesson1;
 
 import java.util.ArrayList;
@@ -10,22 +7,22 @@ import java.util.ArrayList;
  *
  */
 class Department {
-	private String deptName; // Department name
+	private String name; // Department name
 	private ArrayList<Person> personList; // Association (0...*)  - Department keeps a reference to list of Person class
 
-	public Department(String name) { // Constructor
-		this.deptName = name;
+	public Department(String dname) { // Constructor
+		this.name = dname;
 		this.personList = new ArrayList<Person>();
 	}
 
 	public String getDeptName() {
-		return deptName;
+		return name;
 	}
 	// shows the name, phone number, age and type (student, faculty or staff) of all members in the department.
 	public void showAllMembers() {
 
 		for (Person list : personList) {
-			Class cls = list.getClass();
+			Class cls = list.getClass();//Return
 			System.out.println("Name: " + list.getName() + " Phone: " + list.getPhone() + " Age: " + list.getAge()
 			+ " Type: " + cls.getSimpleName());
 		}
@@ -62,7 +59,7 @@ class Department {
 
 	}
 	public void displayStudentPerFaulty(Faculty fct) {
-		System.out.println("Faculty Name: " + fct.getName());
+		System.out.println("Faculty name: " + fct.getName());
 		ArrayList<Course> courseList;
 		Faculty faculty;
 		for (Person per : personList) {

@@ -15,12 +15,12 @@ import java.util.ArrayList;
 
 public class Student extends Person {
 
-	double GPA;
+	private double GPA;
 	private ArrayList<Course> courseList;
 
-	public Student(String name, String phone, int age, double GPA) {
+	public Student(String name, String phone, int age, double gpa) {
 		super(name, phone, age);
-		this.GPA = GPA;
+		this.GPA = gpa;
 		courseList = new ArrayList<Course>();
 	}
 

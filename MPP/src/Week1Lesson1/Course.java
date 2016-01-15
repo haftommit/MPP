@@ -15,6 +15,7 @@ class Course {
 		this.number = number;
 		this.title = title;
 		this.units = units;
+		this.faculty = faculty;
 	}
 	
 	public String getNumber() {
@@ -28,12 +29,9 @@ class Course {
 	public int getUnits() {
 		return units;
 	}
-
-	/**
-	 * @return
-	 */
+	
 	public Faculty getFaculty() {
-		// TODO Auto-generated method stub
+		
 		return faculty;
 	}
 
