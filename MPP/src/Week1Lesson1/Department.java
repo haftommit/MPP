@@ -21,13 +21,6 @@ class Department {
 	public String getDeptName() {
 		return deptName;
 	}
-
-	public void getPersonList(){
-
-		ArrayList<Person> plist = new ArrayList<Person>();
-		System.out.println("List of Persons in the Dept"+deptName);
-	}
-
 	// shows the name, phone number, age and type (student, faculty or staff) of all members in the department.
 	public void showAllMembers() {
 
@@ -63,10 +56,30 @@ class Department {
 			}
 		}
 	}
-
 	public void addPerson(Person per) {
 
 		personList.add(per);
 
 	}
+	public void displayStudentPerFaulty(Faculty fct) {
+		System.out.println("Faculty Name: " + fct.getName());
+		ArrayList<Course> courseList;
+		Faculty faculty;
+		for (Person per : personList) {
+			//System.out.println("Inside Person");
+			if (per instanceof Student) {
+				//System.out.println("Inside Student");
+				Student std = (Student) per;
+				courseList = std.getCourses();
+				for (Course course : courseList) {
+					//System.out.println("Inside Course");
+					faculty = course.getFaculty();
+					if(fct.getName().equals(faculty.getName())){
+						System.out.println("Student Name: " + std.getName());
+						
+					}
+				}
+			}
+		}
+}
 }

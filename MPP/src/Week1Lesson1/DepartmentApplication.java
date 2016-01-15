@@ -45,7 +45,6 @@ public class DepartmentApplication {
 		Student leeJohnson = new Student("Lee Johnson", "472-6009", 19, 3.65);
 
 		dept.addPerson(johnDoe);
-
 		dept.addPerson(maryJones);
 		dept.addPerson(leeJohnson);
 

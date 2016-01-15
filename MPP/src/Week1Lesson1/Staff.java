@@ -9,15 +9,15 @@ package Week1Lesson1;
  */
 class Staff extends Person{
 
-	private double staffSalary;
+	private double salary;
 
 	public Staff(String name, String phone, int age, double salary) {
 		super(name, phone, age);
-		this.staffSalary = salary;
+		this.salary = salary;
 	}
 
 	public double getSalary() {
-		return staffSalary;
+		return salary;
 	}
 }
 

@@ -5,10 +5,6 @@ import java.util.ArrayList;
  * @author haftomtesfay
  *
  */
-
-
-
-
 public class StaffStudents extends Staff {
 
 	private Student student;
