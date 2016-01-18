@@ -73,7 +73,7 @@ public class Position {
 	 * public boolean isManager(Employee emp) { Position pos = emp.getPostion();
 	 * if (pos.equals(superior)) return true; else return false;
 	 * 
-	 * }
+	 * 
 	 */
 	public void printDownLine() {
 
