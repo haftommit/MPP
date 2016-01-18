@@ -5,7 +5,6 @@ import java.sql.Date;
  * @author haftomtesfay
  *
  */
-
 public class Employee {
 
 	private String employeeId;
@@ -34,10 +33,18 @@ public class Employee {
 		return dateOfBirth;
 	}
 
+	public double getSalary() {
+		return salary;
+	}
+
+	public Position getPostion() {
+		return positionHeld;
+	}
+
 	public void print() {
 
-		System.out.println("Id: " + employeeId + " Name: " + firstName + " " + middleInitial + " " + lastName + " SSN: "
-				+ SSN + " Date of birth: " + dateOfBirth + " Salary: " + salary);
+		System.out.println("Employee Id: " + employeeId + " Name: " + firstName + " " + middleInitial + " " + lastName
+				+ " SSN: " + SSN + " Date of birth: " + dateOfBirth + " Salary: " + salary);
 	}
 
 }

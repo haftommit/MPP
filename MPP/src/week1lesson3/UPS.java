@@ -4,20 +4,19 @@ package week1lesson3;
  * @author haftomtesfay
  *
  */
-	
-	public class UPS extends Carrier{
 
-	public UPS(String name, double rate) {
-		super(name, rate);
+public class UPS extends Package {
+	
+	private final double  RATE = 0.45;
+	
+	public UPS(String desc, double weight, String zone, String sender) {
+		super(desc, weight, zone,sender);
 		// TODO Auto-generated constructor stub
 	}
-	
-	public double calculateCost(double noPounds) {
-		// TODO Auto-generated method stub
+
+	public double cost(){
 		
-		double rateups = 0.45*noPounds;
-		return rateups;
+		return RATE * weight;
 	}
 
-	
 }

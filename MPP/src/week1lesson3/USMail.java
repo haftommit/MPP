@@ -4,21 +4,18 @@ package week1lesson3;
  * @author haftomtesfay
  *
  */
-public class USMail extends Carrier {
+public class USMail extends Package {
 
-	public USMail(String name, double rate ) {
-		super(name, rate);
+	public USMail(String desc, double weight, String zone, String sender) {
+		super(desc, weight, zone, sender);
 		// TODO Auto-generated constructor stub
 	}
 
-	public double calculateCost(double noPounds) {
-		double rateusmail = 0;
-		
-		if(noPounds <= 3) 
-			 rateusmail = 1.00;
-		else if (noPounds >3)
-			rateusmail=0.55*noPounds;
-		return rateusmail;
+	public double cost() {
+		if (weight <= 3)
+			return 1;
+		else
+			return 0.55 * weight;
 	}
 
 }
