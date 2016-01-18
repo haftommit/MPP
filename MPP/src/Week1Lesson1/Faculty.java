@@ -10,7 +10,7 @@ public class Faculty extends Person {
 	public Faculty(String name, String phone, int age, double salary ){
 		super(name,phone,age);
 		this.salary = salary;
-		courseList = new ArrayList<Course>();
+		this.courseList = new ArrayList<Course>();
 	}
 
 	public double getSalary(){
@@ -24,6 +24,10 @@ public class Faculty extends Person {
 			totalUnits += courses.getUnits();
 		}
 		return totalUnits;
+	}
+
+	public ArrayList<Course> CourseList(){ // List the courses in the Faculty
+		return courseList; 
 	}
 
 	public void addCourse(Course course){

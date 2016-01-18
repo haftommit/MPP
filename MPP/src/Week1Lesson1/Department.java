@@ -22,7 +22,7 @@ class Department {
 	public void showAllMembers() {
 
 		for (Person list : personList) {
-			Class cls = list.getClass();//Return
+			Class cls = list.getClass();//Return Full Qualified class name @packagename.classname.hashcode
 			System.out.println("Name: " + list.getName() + " Phone: " + list.getPhone() + " Age: " + list.getAge()
 			+ " Type: " + cls.getSimpleName());
 		}
@@ -32,13 +32,13 @@ class Department {
 	public double getTotalSalary() {
 
 		double totalSalary = 0.0;
-		for (Person list : personList) {
-			if (list instanceof Faculty) {
-				Faculty faculty = (Faculty) list;
+		for (Person p : personList) {
+			if (p instanceof Faculty) {
+				Faculty faculty = (Faculty) p;
 				totalSalary += faculty.getSalary();
 			} 
-			else if (list instanceof Staff) {
-				Staff st = (Staff) list;
+			else if (p instanceof Staff) {
+				Staff st = (Staff) p;
 				totalSalary += st.getSalary();
 			}
 		}
@@ -46,37 +46,37 @@ class Department {
 	}
 	//shows a list of all faculty names and the total number of units they teach.
 	public void unitsPerFaculty() {
-		for (Person list : personList) {
-			if (list instanceof Faculty) {
-				Faculty ff = (Faculty) list;
-				System.out.println(ff.getName() + ": " + ff.getTotalUnits());
+		for (Person p : personList) {
+			if (p instanceof Faculty) {
+				Faculty f = (Faculty) p;
+				System.out.println(f.getName() + ": " + f.getTotalUnits());
 			}
 		}
 	}
-	public void addPerson(Person per) {
+	public void addPerson(Person p) {
 
-		personList.add(per);
+		personList.add(p);
 
 	}
 	public void displayStudentPerFaulty(Faculty fct) {
 		System.out.println("Faculty name: " + fct.getName());
 		ArrayList<Course> courseList;
 		Faculty faculty;
-		for (Person per : personList) {
+		for (Person p : personList) {
 			//System.out.println("Inside Person");
-			if (per instanceof Student) {
+			if (p instanceof Student) {
 				//System.out.println("Inside Student");
-				Student std = (Student) per;
+				Student std = (Student) p;
 				courseList = std.getCourses();
 				for (Course course : courseList) {
 					//System.out.println("Inside Course");
 					faculty = course.getFaculty();
 					if(fct.getName().equals(faculty.getName())){
 						System.out.println("Student Name: " + std.getName());
-						
+
 					}
 				}
 			}
 		}
-}
+	}
 }

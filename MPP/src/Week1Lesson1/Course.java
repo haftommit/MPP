@@ -9,7 +9,7 @@ class Course {
 	private String number;
 	private String title;
 	private int units;
-	private Faculty faculty; //Association to Faculty class
+	private Faculty faculty; //A Course is taught by a Faculty --> (Association)
 	
 	public Course(String number, String title, int units, Faculty faculty) {
 		this.number = number;

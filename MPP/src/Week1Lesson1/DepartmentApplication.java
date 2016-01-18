@@ -3,29 +3,18 @@ package Week1Lesson1;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
-import java.sql.Date;
-import java.util.ArrayList;
-
-import java.io.BufferedReader;
-import java.io.IOException;
-import java.io.InputStreamReader;
 
 /**
  * @author haftomtesfay
  *
  */
-
 public class DepartmentApplication {
 
 	public static void main(String[] args) throws IOException {
 
 		Department dept = new Department("ComputerScience");
-
-		// The following commented out code will help you
-		// create the objects that you need.
-
-		/*******************************************************
-		 *
+		
+		/*
 		 * // Create faculty objects
 		 */
 		Faculty frankMoore = new Faculty("Frank Moore", "472-5921", 43, 10000);
@@ -37,8 +26,7 @@ public class DepartmentApplication {
 		dept.addPerson(johnDoodle);
 
 		/*
-		 * 
-		 * // Create student objects
+		 *  Create student objects
 		 */
 		Student johnDoe = new Student("John Doe", "472-1121", 22, 4.0);
 		Student maryJones = new Student("Mary Jones", "472-7322", 32, 3.80);
@@ -49,8 +37,7 @@ public class DepartmentApplication {
 		dept.addPerson(leeJohnson);
 
 		/*
-		 * 
-		 * // Create staff objects
+		 *  Create staff objects
 		 */
 		Staff frankGore = new Staff("Frank Gore", "472-3321", 33, 4050);
 		Staff adamDavis = new Staff("Adam Davis", "472-7552", 50, 5500);
