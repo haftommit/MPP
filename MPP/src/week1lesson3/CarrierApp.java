@@ -53,9 +53,9 @@ public class CarrierApp {
 		try {
 			while (true) {
 				getCost();
-				System.out.println("Enter q to finish c to continue");
-				String quite = sc.nextLine();
-				char ch = quite.charAt(0);
+				System.out.println("Enter q to Quit c to continue");
+				String quit = sc.nextLine();
+				char ch = quit.charAt(0);
 				if (ch == 'q' || ch == 'Q')
 					break;
 			}

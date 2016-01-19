@@ -22,8 +22,8 @@ public class Position {
 		this.description = desc;
 		this.dept = dept;
 
-		employeeList = new ArrayList<Employee>();
-		inferior = new ArrayList<Position>();
+		this.employeeList = new ArrayList<Employee>();
+		this.inferior = new ArrayList<Position>();
 	}
 
 	public String getTitle() {
@@ -33,7 +33,7 @@ public class Position {
 	public void print() {
 
 		System.out.println("Title: " + title + " Description: "
-				+ description /* + " Total Salary: $" + getSalary() */);
+				+ description );	/* + " Total Salary: $" + getSalary() */
 
 		for (Employee emp : employeeList)
 			emp.print();

@@ -5,8 +5,6 @@ import java.util.ArrayList;
  * @author haftomtesfay
  *
  */
-
-import java.util.ArrayList;
 public class Company {
 
 	private String name;
@@ -15,15 +13,13 @@ public class Company {
 	public Company(String name) {
 
 		this.name = name;
-		departmentList = new ArrayList<Department>();
+		this.departmentList = new ArrayList<Department>();
 	}
 
 	public void print() {
-		System.out.println(
-				"Company Name: " + name /* + " Total Salary: $" + getSalary() */);
+		System.out.println("Company Name: " + name /* + " Total Salary: $" + getSalary() */);
 		for (Department dept : departmentList)
 			dept.print();
-
 	}
 
 	public void addDepartment(Department dept) {
@@ -49,7 +45,7 @@ public class Company {
 		Position pos = null;
 
 		for (Department dept : departmentList) {
-			
+
 		}
 		return pos;
 	}
@@ -78,5 +74,5 @@ public class Company {
 			return false;
 		return true;
 	}
-	
+
 }

@@ -1,5 +1,7 @@
 package week1Lesson2;
 
+import java.text.NumberFormat;
+
 /**
  * @author haftomtesfay
  *
@@ -9,7 +11,7 @@ public class HRApplication {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 
-		Company comp = new Company("Kb");
+		Company comp = new Company("Haftom");
 		Department hrDept = new Department("HR", "Mekelle", comp);
 
 		Position snrSec = new Position("HR", "Main HR", hrDept);
