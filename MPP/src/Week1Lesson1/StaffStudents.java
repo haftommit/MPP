@@ -6,10 +6,9 @@ import java.util.ArrayList;
  *
  */
 public class StaffStudents extends Staff {
-
-	private Date startDateFirstCourse;
 	private Student student;
-	
+	private Date startDateFirstCourse;
+
 	public StaffStudents(String name, String phone, int age, double salary, Student std) {
 		super(name, phone, age, salary);
 		this.student = std;

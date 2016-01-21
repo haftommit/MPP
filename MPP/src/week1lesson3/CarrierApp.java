@@ -14,7 +14,7 @@ public class CarrierApp {
 		String zone;
 		double weight;
 		// double cost;
-		Package pck; // upsPck, usMailPck, fedexPck;
+		Carrier pck; // upsPck, usMailPck, fedexPck;
 		// ArrayList<Package> packageList;
 		Scanner sc = new Scanner(System.in);
 		System.out.println("Enter sender type as S for student, E for senior");
@@ -26,11 +26,11 @@ public class CarrierApp {
 		System.out.println("Enter the weight of the package");
 		weight = sc.nextDouble();
 		pck = new UPS(desc, weight, zone, sender);
-		double upsCost = pck.cost();
+		double upsCost = pck.calculateRate();
 		pck = new USMail(desc, weight, zone, sender);
-		double usMailCost = pck.cost();
+		double usMailCost = pck.calculateRate();
 		pck = new FedEx(desc, weight, zone, sender);
-		double fedexCost = pck.cost();
+		double fedexCost = pck.calculateRate();
 		double discount;
 		if (pck.sender == "S")
 			discount = 0.1;

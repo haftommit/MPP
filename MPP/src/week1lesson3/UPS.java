@@ -5,7 +5,7 @@ package week1lesson3;
  *
  */
 
-public class UPS extends Package {
+public class UPS extends Carrier {
 	
 	private final double  RATE = 0.45;
 	
@@ -14,7 +14,7 @@ public class UPS extends Package {
 		// TODO Auto-generated constructor stub
 	}
 
-	public double cost(){
+	public double calculateRate(){
 		
 		return RATE * weight;
 	}
