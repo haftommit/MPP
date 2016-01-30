@@ -27,7 +27,7 @@ public class ProcessingEmployees {
 
 		// get List view of the Employees
 		List<Employee> list = Arrays.asList(employees);
-
+		
 		// display all Employees
 		System.out.println("Complete Employee list:");
 		list.stream().forEach(System.out::println);
