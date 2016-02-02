@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+
+<AnchorPane prefHeight="500.0" prefWidth="600.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8" fx:controller="JavaFXSceneBuilder.FormController">
+   <children>
+      <Label layoutX="40.0" layoutY="26.0" text="Name:" />
+      <Label layoutX="280.0" layoutY="26.0" text="Street:" />
+      <Label layoutX="479.0" layoutY="26.0" text="City" />
+      <Label layoutX="53.0" layoutY="131.0" text="State" />
+      <Label layoutX="290.0" layoutY="132.0" text="Zip Code:" />
+      <TextField fx:id="nameField" layoutX="15.0" layoutY="53.0" />
+      <TextField fx:id="streetField" layoutX="243.0" layoutY="53.0" />
+      <TextField fx:id="cityField" layoutX="433.0" layoutY="53.0" prefHeight="27.0" prefWidth="145.0" />
+      <TextField fx:id="stateField" layoutX="19.0" layoutY="152.0" prefHeight="27.0" prefWidth="167.0" />
+      <TextField fx:id="zipcodeField" layoutX="242.0" layoutY="155.0" />
+      <Button fx:id="submitButton" layoutX="462.0" layoutY="223.0" mnemonicParsing="false" onAction="#handle" prefHeight="27.0" prefWidth="88.0" text="Submit:" />
+      <Label fx:id="lbloutput" layoutX="19.0" layoutY="264.0" prefHeight="90.0" prefWidth="184.0" />
+   </children>
+</AnchorPane>
