@@ -1,8 +1,0 @@
-/**
- * 
- */
-/**
- * @author haftomtesfay
- *
- */
-package javaFXLab;
