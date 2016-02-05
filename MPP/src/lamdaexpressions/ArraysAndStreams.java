@@ -28,6 +28,7 @@ public class ArraysAndStreams
 				Arrays.stream(values)
 				.filter(value -> value > 4)
 				.collect(Collectors.toList());
+		
 		System.out.printf("Values greater than 4: %s%n", greaterThan4);
 
 		// filter values greater than 4 then sort the results
@@ -43,5 +44,16 @@ public class ArraysAndStreams
 				greaterThan4.stream()
 				.sorted()
 				.collect(Collectors.toList()));
+		
+		List<Integer> intlist = Arrays.asList(values);
+		System.out.println(intlist.stream().count());
+		System.out.println(intlist.stream().mapToInt(e->e).sum());
+		System.out.println(intlist.stream().mapToInt(e->e).min());
+		System.out.println(intlist.stream().mapToInt(e->e).max());
+		System.out.println(intlist.stream().mapToInt(e->e).reduce(0, (x,y)->x+y));
+		System.out.println(intlist.stream().mapToDouble(e->e).average());
+		System.out.println(intlist.stream().findFirst());
+		System.out.println(intlist.stream().findAny());
+		
 	}
 } // end class ArraysAndStreams

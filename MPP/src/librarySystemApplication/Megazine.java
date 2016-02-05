@@ -1,14 +1,8 @@
-/**
- * 
- */
 package librarySystemApplication;
 
-/**
- * @author haftomtesfay
- *
- */
 public class Megazine extends Item {
 
+	
 	private int limit;
 	private int issue;
 

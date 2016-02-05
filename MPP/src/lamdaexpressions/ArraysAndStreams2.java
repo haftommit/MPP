@@ -21,7 +21,7 @@ public class ArraysAndStreams2
 		// display original strings
 		System.out.printf("Original strings: %s%n", Arrays.asList(strings));
 
-		// strings in uppercase
+		// strings in upper case
 		System.out.printf("strings in uppercase: %s%n",
 				Arrays.stream(strings)
 				.map(String::toUpperCase)

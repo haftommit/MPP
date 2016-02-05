@@ -1,12 +1,5 @@
-/**
- * 
- */
 package librarySystemApplication;
 
-/**
- * @author haftomtesfay
- *
- */
 import java.util.Date;
 
 public class Loan {

@@ -1,12 +1,5 @@
-/**
- * 
- */
 package librarySystemApplication;
 
-/**
- * @author haftomtesfay
- *
- */
 import java.util.ArrayList;
 
 public class Item {

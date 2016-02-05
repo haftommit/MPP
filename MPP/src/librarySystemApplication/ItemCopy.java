@@ -1,12 +1,5 @@
-/**
- * 
- */
 package librarySystemApplication;
 
-/**
- * @author haftomtesfay
- *
- */
 public class ItemCopy {
 
 	private String copyId;

@@ -1,6 +1,3 @@
-/**
- * 
- */
 package lamdaexpressions;
 
 /**
@@ -85,7 +82,7 @@ public class Employee
 	@Override
 	public String toString() 
 	{
-		return String.format("%-8s %-8s %8.2f   %s", 
+		return String.format("%-8s %-8s %8.2f  %s", 
 				getFirstName(), getLastName(), getSalary(), getDepartment());
 	} // end method toString
 } // end class Employee

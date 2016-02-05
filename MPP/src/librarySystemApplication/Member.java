@@ -1,16 +1,9 @@
-/**
- * 
- */
 package librarySystemApplication;
 
-import java.sql.Date;
 import java.util.ArrayList;
 import java.util.Calendar;
+import java.util.Date;
 
-/**
- * @author haftomtesfay
- *
- */
 public class Member {
 
 	private String id;
@@ -49,7 +42,7 @@ public class Member {
 	public void reserve(Item item) {
 
 		if (!(item.checkAvailability())) {
-			Reservation reserve = new Reservation(new Date(0), item);
+			Reservation reserve = new Reservation(new Date(), item);
 			addReservation(reserve);
 		}
 
@@ -59,7 +52,7 @@ public class Member {
 
 		if (item.getAvailable()) {
 			Date dateReturn = dateAdd(20);
-			Loan loan = new Loan(new Date(0),dateReturn);// = new Loan(new Date(), dateReturn);
+			Loan loan = new Loan(new Date(),dateReturn);// = new Loan(new Date(), dateReturn);
 			loan.setItemCopy(item);
 			addLoan(loan);
 			item.setAvailable(false);
@@ -82,12 +75,12 @@ public class Member {
 
 	// A method used to add days to a date
 	public Date dateAdd(int days) {
-		Date dateNow = new Date(days);
+		Date dateNow = new Date();
 		Calendar cal = Calendar.getInstance();
 		cal.setTime(dateNow);
 		cal.add(Calendar.DATE, 20);
 
-		return (Date) cal.getTime();
+		return cal.getTime();
 	}
 
 }
